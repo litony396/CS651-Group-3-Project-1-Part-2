@@ -2,6 +2,12 @@
 
 /* Global values */
 :root{
+  --panel: rgba(255,255,255,0.72);
+  --panel2: rgba(255,255,255,0.86);
+  --text: #111827;          /* near-black */
+  --muted: rgba(17,24,39,0.65);
+  --line: rgba(17,24,39,0.10);
+
   --bg: #ffffff;			/* white */
   --accent: #FFCCE8;        /* pink */
   --accent2: #6ee7ff;       /* icy blue */
@@ -10,13 +16,23 @@
 /* Body */
 body {
 	font-family: source-sans-pro;
-	background-color: #f2f2f2;
+	background-color: #f2f2f2; /* baby blue */
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
+}
+html, body {
+  height: 100%; /* Ensure html and body take full height */
+  margin: 0;
+}
+
+.site-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header/footer sized by content, main takes remaining space */
+  min-height: 100vh; /* Wrapper is at least the height of the viewport */
 }
 /* Container */
 .container {
@@ -98,4 +114,41 @@ footer {
 	display: flex;
 	justify-content: space-around;
 	bottom: 0;
+}
+.panel{
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 18px 45px rgba(17,24,39,0.08);
+}
+
+.divider{
+  height: 1px;
+  background: var(--line);
+  margin: 14px 0;
+}
+
+.text-muted-neo{ color: var(--muted) !important; }
+
+.panel-soft{
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+/* Toast */
+.toast{
+  border: 1px solid var(--line) !important;
+  background: rgba(255,255,255,0.90) !important;
+  color: rgba(17,24,39,0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-caption {
+	color: #FFFFFF;
+	-webkit-text-stroke: 1px black;
+	top: 0;
+	bottom: auto;
 }
