@@ -138,6 +138,10 @@ footer {
   padding: 16px;
 }
 
+.right-float {
+	float: right;
+}
+
 /* Toast */
 .toast{
   border: 1px solid var(--line) !important;
