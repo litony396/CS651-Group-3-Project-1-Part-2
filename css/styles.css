@@ -157,7 +157,8 @@ ul li:hover a {
 }
 
 .truck-img{
-  width: min(1250px, 140%);
+  width: 100%;
+  max-width: 1050px;
   height: auto;
   transform-origin: center;
   will-change: transform;
